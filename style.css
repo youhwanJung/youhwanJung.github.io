@@ -1529,6 +1529,7 @@ nav a:hover {
   #hero {
     padding: 0 24px;
     min-height: 70vh;
+    min-height: 100svh;  /* iOS 대응 */
   }
 
   .hero-main-title {
