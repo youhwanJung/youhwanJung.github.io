@@ -1617,6 +1617,10 @@ nav a:hover {
     grid-template-columns: 1fr;
     gap: 28px;
   }
+
+  .hero-cta {
+    display: none;
+  }
 }
 
 /* ============================================================
