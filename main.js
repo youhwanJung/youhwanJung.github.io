@@ -73,3 +73,8 @@ function switchTab(btn, tabId) {
   modal.querySelector('#' + tabId).classList.add('active');
 }
 
+document.querySelectorAll('.project-card').forEach((card) => {
+  card.addEventListener('click', () => {
+    openModal(card.dataset.modal);
+  });
+});
