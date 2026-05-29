@@ -5,7 +5,6 @@ const logoLink = document.querySelector('header h1 a');
 const navLinks = document.querySelectorAll('nav a');
 const nav = document.querySelector('nav');
 const hamburger = document.querySelector('.hamburger');
-const hero = document.querySelector('#hero');
 
 document.body.style.paddingTop = headerHeight + 'px';
 hero.style.marginTop = '-' + headerHeight + 'px';
