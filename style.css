@@ -1717,5 +1717,9 @@ nav a:hover {
     font-size: 13px;
   }
 
+  .hero-cta {
+    display: none;
+  }
+
   /* ────────────────────────────────────────── */
 }
