@@ -1631,6 +1631,12 @@ nav a:hover {
    RESPONSIVE — Mobile (<= 768px)
 ============================================================ */
 @media (max-width: 768px) {
+  
+  #hero {
+    padding: 0 24px;
+    min-height: 70svh;
+  }
+
   header {
     background-color: #ffffff !important;
     padding: 14px 20px;
