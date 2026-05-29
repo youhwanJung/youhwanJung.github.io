@@ -1527,7 +1527,8 @@ nav a:hover {
 @media (max-width: 968px) {
   #hero {
     padding: 0 24px;
-    min-height: 70svh;
+     height: 520px !important;
+    min-height: 520px !important;
   }
 
   .hero-main-title {
@@ -1631,10 +1632,11 @@ nav a:hover {
    RESPONSIVE — Mobile (<= 768px)
 ============================================================ */
 @media (max-width: 768px) {
-  
+
   #hero {
     padding: 0 24px;
-    min-height: 70svh;
+    height: 520px !important;
+    min-height: 520px !important;
   }
 
   header {
