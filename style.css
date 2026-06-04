@@ -478,10 +478,11 @@ nav a:hover {
   font-size: 14px;
   font-weight: 600;
   color: #475569;
-  margin: 0 0 16px 0;
+  margin: 20px 0 0px 0;
 }
 
 .company-duration {
+  padding-top: 8px;
   font-size: 13px;
   font-weight: 500;
   color: #94a3b8;
@@ -519,6 +520,42 @@ nav a:hover {
   align-items: flex-start;
   gap: 16px;
   margin-bottom: 6px;
+}
+.p-team-grid {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 8px;
+  align-items: center;
+  gap: 8px 20px; /* 행간 8px, 열간 20px */
+}
+
+.p-team-grid li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13.5px;
+  color: #475569;
+}
+
+.team-icon {
+  width: 15px;
+  height: 15px;
+  color: #64748b; /* 아이콘 색상을 서브 톤으로 매치 */
+  flex-shrink: 0;
+}
+
+.me-tag {
+  font-size: 10px;
+  font-weight: 700;
+  color: #1a2a3a;
+  background: #e2e8f0;
+  padding: 1px 4px;
+  border-radius: 3px;
+  margin-left: 5px;
+  vertical-align: middle;
 }
 
 .p-title {
@@ -564,14 +601,15 @@ nav a:hover {
   flex-wrap: wrap;
   gap: 6px;
   margin-bottom: 20px;
+  margin-top: 8px;
 }
 
 .tech-tag {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   background: #f1f5f9;
   color: #334155;
-  padding: 3px 8px;
+  padding: 4px 9px;
   border-radius: 4px;
 }
 
@@ -611,6 +649,8 @@ nav a:hover {
   font-weight: 700;
   color: #1a2a3a;
 }
+
+
 
 /* ============================================================
    SKILLS
@@ -1850,6 +1890,7 @@ nav a:hover {
 
   .p-tech-badges {
     gap: 4px;
+    margin-top: 8px;
   }
 
   .tech-tag {
@@ -1860,6 +1901,7 @@ nav a:hover {
   .p-bullet-list li {
     font-size: 13px;
   }
+  
 
   .modal-overlay {
     padding: 0 !important;
