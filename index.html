@@ -738,29 +738,29 @@
               </div>
             </div>
 
-            <div class="project-card" onclick="openModal('modal2')">
+            <div class="project-card" data-modal="modal2">
               <div class="project-img-wrap">
-                <img src="assets/Campus_Life.png" alt="Campus Life 프로젝트">
+                <img src="assets/attendnace/attendance_main.jpg" alt="회사 출결 어플리케이션">
               </div>
               <div class="project-info">
-                <div class="project-name">Campus Life</div>
-                <div class="project-desc">학교 생활을 하나의 어플리케이션으로 간편하게!</div>
+                <div class="project-name">출결이</div>
+                <div class="project-desc">웹으로만 제공되었던 출결 시스템을 앱으로 리뉴얼</div>
                 <div class="project-footer">
                   <div class="project-platform">
-                    <i class="devicon-react-original colored"></i>
-                    React Native
+                    <i class="devicon-flutter-plain colored"></i>
+                    Flutter
                   </div>
                   <div class="project-tags">
+                    <span class="project-tag">iOS</span>
                     <span class="project-tag">Android</span>
                   </div>
                 </div>
                 <div class="project-duration">
                   <span class="material-icons">calendar_today</span>
-                  2024.08 ~ 2024.12 (4개월)
+                  2025.10 ~ 2025.12 (2개월)
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </div>
@@ -1510,7 +1510,7 @@
   </div>
 
   <!-- ============================================================
-       MODAL — Campus Life
+       MODAL — ATTENDNACE_APP
   ============================================================ -->
   <div class="modal-overlay" id="modal2" onclick="closeModal('modal2')">
     <div class="modal-box" onclick="event.stopPropagation()">
@@ -1518,7 +1518,756 @@
         <span class="material-icons">close</span>
       </button>
       <div class="modal-content">
-        <!-- 추후 작성 -->
+        <div class="modal-project-header">
+          <div class="modal-project-title-row">
+            <h2 class="modal-project-name">출결이</h2>
+            <div class="modal-title-btns">
+              <a href="https://github.com/youhwanJung/cash-log-public" target="_blank" class="modal-github-btn">
+                <i class="devicon-github-original"></i>
+                GitHub
+              </a>
+              <span class="modal-store-btn ios">
+                <i class="devicon-apple-original"></i>
+                TestFlight 사내 배포
+              </span>
+              <span class="modal-store-btn android">
+                <i class="devicon-android-plain"></i>
+                APK 사내 배포
+              </span>
+            </div>
+          </div>
+          <p class="modal-project-subtitle">웹으로만 제공되었던 출결 시스템을 앱으로 리뉴얼</p>
+          <div class="modal-project-meta-row">
+            <span class="modal-meta-badge">
+              <span class="material-icons">calendar_today</span>
+              2025.10 ~ 2025.12 (2개월)
+            </span>
+            <span class="modal-meta-badge">
+              <span class="material-icons">group</span>
+              팀 프로젝트
+            </span>
+            <span class="modal-meta-badge">
+              <span class="material-icons">people</span>
+              모바일 1 (본인) · 서버 1
+            </span>
+          </div>
+        </div>
+
+        <div class="modal-tabs">
+          <button class="modal-tab active" onclick="switchTab(this, 'tab-info')">
+            <span class="material-icons">info</span>
+            프로젝트 소개
+          </button>
+          <button class="modal-tab" onclick="switchTab(this, 'tab-trouble')">
+            <span class="material-icons">build</span>
+            트러블 슈팅
+          </button>
+          <button class="modal-tab" onclick="switchTab(this, 'tab-result')">
+            <span class="material-icons">school</span>
+            배운 점
+          </button>
+        </div>
+
+        <!-- Tab: 프로젝트 소개 -->
+        <div class="modal-tab-content active" id="tab-info">
+
+          <div class="modal-tech-section">
+            <div class="modal-section-title">
+              <span class="material-icons">description</span>
+              개요
+            </div>
+            <p class="modal-overview-text">
+              웹에서만 제공되던 회사 출결 시스템을 모바일 앱으로 리뉴얼한 개인 프로젝트입니다.
+              메일 링크를 통해 출결을 처리해야 했던 기존 방식이 불편하다는 동료들의 의견에서 시작해,
+              같은 기능을 앱으로 옮기면 더 편리할 것이라 생각해 자발적으로 기획하고 개발했습니다.
+              기존 API를 그대로 활용하는 대신, 디자인과 사용자 경험에 집중해 출결 과정을 더 직관적이고
+              부드럽게 느껴지도록 애니메이션 구현에 많은 시도를 담았습니다.
+              완성된 앱은 TestFlight와 APK로 배포해 사내 동료들이 실제로 사용할 수 있도록 공유했습니다.
+            </p>
+          </div>
+
+          <div class="modal-tech-section">
+            <div class="modal-section-title">
+              <span class="material-icons">manage_accounts</span>
+              담당 역할
+            </div>
+            <ul class="modal-role-list">
+              <li class="modal-role-item"><span class="material-icons">chevron_right</span>Flutter 앱 전체 개발 담당 (iOS /
+                Android)</li>
+              <li class="modal-role-item"><span class="material-icons">chevron_right</span>Clean Architecture 기반 프로젝트 구조
+                설계</li>
+              <li class="modal-role-item"><span class="material-icons">chevron_right</span>출근·퇴근·근무지 변경·휴가/연차 사용·개인정보 확인
+                등 핵심 UI 개발</li>
+              <li class="modal-role-item"><span class="material-icons">chevron_right</span>날씨 API 연동을 통한 날씨 기반 UI 변경 기능
+                구현</li>
+              <li class="modal-role-item"><span class="material-icons">chevron_right</span>웹 크롤링을 통한 구내식당 메뉴판 정보 제공 기능
+                구현</li>
+              <li class="modal-role-item"><span class="material-icons">chevron_right</span>화면 전환 및 인터랙션 애니메이션 구현</li>
+              <li class="modal-role-item"><span class="material-icons">chevron_right</span>TestFlight(iOS) 및APK(Android)
+                사내 배포</li>
+            </ul>
+          </div>
+
+          <div class="modal-tech-section">
+            <div class="modal-section-title">
+              <span class="material-icons">star</span>
+              주요 기능
+            </div>
+            <div class="modal-feature-list">
+
+              <div class="modal-feature-item">
+                <span class="material-icons modal-feature-icon">badge</span>
+                <div>
+                  <div class="modal-feature-title">출근 · 퇴근</div>
+                  <div class="modal-feature-desc">버튼 한 번으로 출근과 퇴근을 기록합니다. 현재 출근 상태에 따라 화면 UI가 자연스럽게 전환됩니다.</div>
+                </div>
+              </div>
+
+              <div class="modal-feature-item">
+                <span class="material-icons modal-feature-icon">swap_horiz</span>
+                <div>
+                  <div class="modal-feature-title">근무지 변경</div>
+                  <div class="modal-feature-desc">사무실, 외근, 재택 등 근무지를 간단히 선택해 변경할 수 있습니다.</div>
+                </div>
+              </div>
+
+              <div class="modal-feature-item">
+                <span class="material-icons modal-feature-icon">beach_access</span>
+                <div>
+                  <div class="modal-feature-title">휴가 · 연차 사용</div>
+                  <div class="modal-feature-desc">휴가와 연차를 신청하고 사용 현황을 확인할 수 있습니다.</div>
+                </div>
+              </div>
+
+              <div class="modal-feature-item">
+                <span class="material-icons modal-feature-icon">wb_sunny</span>
+                <div>
+                  <div class="modal-feature-title">날씨 기반 UI</div>
+                  <div class="modal-feature-desc">날씨 API를 연동해 현재 날씨에 맞춰 메인 화면의 분위기와 UI가 변경됩니다.</div>
+                </div>
+              </div>
+
+              <div class="modal-feature-item">
+                <span class="material-icons modal-feature-icon">restaurant_menu</span>
+                <div>
+                  <div class="modal-feature-title">구내식당 메뉴 안내</div>
+                  <div class="modal-feature-desc">웹 크롤링을 통해 당일 구내식당 메뉴를 가져와 한눈에 확인할 수 있습니다.</div>
+                </div>
+              </div>
+
+              <div class="modal-feature-item">
+                <span class="material-icons modal-feature-icon">person</span>
+                <div>
+                  <div class="modal-feature-title">개인정보 확인</div>
+                  <div class="modal-feature-desc">소속, 직급, 근무 이력 등 개인 정보를 앱에서 바로 확인할 수 있습니다.</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="modal-tech-section">
+            <div class="modal-section-title">
+              <span class="material-icons">terminal</span>
+              Tech Stack
+            </div>
+            <div class="modal-tech-grid">
+              <div class="modal-tech-category">
+                <div class="modal-tech-category-label">Language</div>
+                <div class="modal-tech-tags"><span class="modal-tech-tag">Dart</span></div>
+              </div>
+              <div class="modal-tech-category">
+                <div class="modal-tech-category-label">Framework</div>
+                <div class="modal-tech-tags"><span class="modal-tech-tag">Flutter</span></div>
+              </div>
+              <div class="modal-tech-category">
+                <div class="modal-tech-category-label">Architecture</div>
+                <div class="modal-tech-tags"><span class="modal-tech-tag">Clean Architecture</span></div>
+              </div>
+              <div class="modal-tech-category">
+                <div class="modal-tech-category-label">State Management</div>
+                <div class="modal-tech-tags"><span class="modal-tech-tag">Provider</span></div>
+              </div>
+              <div class="modal-tech-category">
+                <div class="modal-tech-category-label">DI</div>
+                <div class="modal-tech-tags">
+                  <span class="modal-tech-tag">get_it</span>
+                  <span class="modal-tech-tag">injectable</span>
+                </div>
+              </div>
+              <div class="modal-tech-category">
+                <div class="modal-tech-category-label">Network</div>
+                <div class="modal-tech-tags">
+                  <span class="modal-tech-tag">Dio</span>
+                  <span class="modal-tech-tag">Retrofit</span>
+                </div>
+              </div>
+              <div class="modal-tech-category">
+                <div class="modal-tech-category-label">Storage</div>
+                <div class="modal-tech-tags">
+                  <span class="modal-tech-tag">flutter_secure_storage</span>
+                  <span class="modal-tech-tag">shared_preferences</span>
+                </div>
+              </div>
+              <div class="modal-tech-category">
+                <div class="modal-tech-category-label">Animation</div>
+                <div class="modal-tech-tags"><span class="modal-tech-tag">Lottie</span></div>
+              </div>
+              <div class="modal-tech-category">
+                <div class="modal-tech-category-label">UI</div>
+                <div class="modal-tech-tags">
+                  <span class="modal-tech-tag">flutter_screenutil</span>
+                  <span class="modal-tech-tag">table_calendar</span>
+                  <span class="modal-tech-tag">visibility_detector</span>
+                </div>
+              </div>
+              <div class="modal-tech-category">
+                <div class="modal-tech-category-label">Navigation</div>
+                <div class="modal-tech-tags"><span class="modal-tech-tag">go_router</span></div>
+              </div>
+              <div class="modal-tech-category">
+                <div class="modal-tech-category-label">Config</div>
+                <div class="modal-tech-tags">
+                  <span class="modal-tech-tag">flutter_dotenv</span>
+                  <span class="modal-tech-tag">flutter_localization</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-screenshot-section">
+            <div class="modal-section-title">
+              <span class="material-icons">photo_library</span>
+              Screenshots
+            </div>
+            <div class="modal-slides">
+              <div class="slide-track">
+                <img class="slide-img" src="assets/attendnace/attendnace_1.png" alt="스크린샷1">
+                <img class="slide-img" src="assets/attendnace/attendnace_2.png" alt="스크린샷2">
+                <img class="slide-img" src="assets/attendnace/attendnace_3.png" alt="스크린샷3">
+                <img class="slide-img" src="assets/attendnace/attendnace_4.png" alt="스크린샷4">
+                <img class="slide-img" src="assets/attendnace/attendnace_5.png" alt="스크린샷5">
+                <img class="slide-img" src="assets/attendnace/attendnace_6.png" alt="스크린샷6">
+                <img class="slide-img" src="assets/attendnace/attendnace_7.png" alt="스크린샷7">
+                <img class="slide-img" src="assets/attendnace/attendnace_8.png" alt="스크린샷8">
+                <img class="slide-img" src="assets/attendnace/attendnace_9.png" alt="스크린샷9">
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-trouble-link-wrap">
+            <button class="modal-trouble-link-btn"
+              onclick="switchTab(this.closest('.modal-content').querySelector('.modal-tab[onclick*=tab-trouble]'), 'tab-trouble'); this.closest('.modal-box').scrollTo({top: 0, behavior: 'smooth'})">
+              <span class="material-icons">build</span>
+              어떤 문제가 있었고, 어떻게 해결했을까?
+              <span class="material-icons">arrow_forward</span>
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Tab: 트러블 슈팅 -->
+        <div class="modal-tab-content" id="tab-trouble">
+          <div class="modal-trouble-section">
+            <div class="trouble-list">
+
+              <div class="trouble-item">
+                <div class="trouble-header">
+                  <span class="trouble-num">01</span>
+                  <div class="trouble-title">API 명세서 없음 -> 개발자도구로 직접 API 명세 추출</div>
+                </div>
+                <div class="trouble-body">
+                  <div class="trouble-timeline">
+                    <div class="timeline-step">
+                      <div class="timeline-dot"></div>
+                      <div class="timeline-line"></div>
+                      <div class="timeline-content">
+                        <div class="trouble-label problem">문제 상황</div>
+                        <p class="trouble-text">
+                          이 프로젝트는 회사에서 요청한 것이 아니라 제가 자발적으로 기획하고 개발한 프로젝트였습니다.
+                          기존 출결 시스템은 웹사이트로만 제공되고 있었고, 앱에서 사용할 API 주소나 요청/응답 형식을
+                          정리한 명세서가 전혀 없었습니다. 담당 부서에 API 명세를 요청할 수 있는 상황도 아니었기 때문에,
+                          앱에서 어떤 데이터를 어떻게 받아야 하는지부터 막막했습니다.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="timeline-step">
+                      <div class="timeline-dot"></div>
+                      <div class="timeline-line"></div>
+                      <div class="timeline-content">
+                        <div class="trouble-label cause">원인 분석</div>
+                        <p class="trouble-text">
+                          API를 새로 만들거나 변경할 수 있는 권한이 없었고, 서버 담당자에게 명세 작업을 따로
+                          요청하기도 어려운 개인 프로젝트였습니다. 결국 기존 API를 그대로 사용하면서,
+                          제가 직접 각 기능이 어떤 요청을 보내고 어떤 응답을 받는지 알아내야 하는 상황이었습니다.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="timeline-step">
+                      <div class="timeline-dot"></div>
+                      <div class="timeline-line"></div>
+                      <div class="timeline-content">
+                        <div class="trouble-label solution">해결 방법</div>
+                        <p class="trouble-text">
+                          웹사이트의 개발자도구 Network 탭을 열어, 출근/퇴근, 휴가 신청, 근무지 변경 등
+                          모든 기능을 하나씩 직접 사용해보며 각 기능에서 발생하는 요청 URL, 메서드, 파라미터,
+                          응답 데이터를 일일이 기록했습니다. 이렇게 모은 정보를 바탕으로 API 명세를 직접 정리하고,
+                          응답 구조를 그대로 받는 DTO와 앱에서 사용할 도메인 모델을 분리한 뒤,
+                          Mapper를 통해 웹의 응답값을 제가 원하는 형태로 변환하는 구조로 설계했습니다.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="timeline-step last">
+                      <div class="timeline-dot"></div>
+                      <div class="timeline-content">
+                        <div class="trouble-label result">결과 & 배운 점</div>
+                        <p class="trouble-text">
+                          API 명세서가 전혀 없는 상태에서도 기존 서비스를 분석해 필요한 데이터를 모두 추출하고,
+                          앱에서 정상적으로 사용할 수 있는 구조까지 만들 수 있었습니다.<br><br>
+                          명세서가 없다고 해서 개발이 불가능한 것은 아니라는 걸 직접 경험했습니다.
+                          이미 동작하는 서비스가 있다면, 개발자도구만으로도 충분히 API 구조를 파악할 수 있다는 것을 배웠고,
+                          DTO와 도메인 모델을 분리하고 Mapper로 변환하는 구조를 미리 잡아두면
+                          서버 응답 형식에 변화가 생기더라도 Mapper 한 곳만 수정해서 대응할 수 있다는 것도 체감했습니다.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="trouble-item">
+                <div class="trouble-header">
+                  <span class="trouble-num">02</span>
+                  <div class="trouble-title">커스텀 애니메이션의 렌더링 이슈 -> Lottie 도입으로 해결</div>
+                </div>
+                <div class="trouble-body">
+                  <div class="trouble-timeline">
+                    <div class="timeline-step">
+                      <div class="timeline-dot"></div>
+                      <div class="timeline-line"></div>
+                      <div class="timeline-content">
+                        <div class="trouble-label problem">문제 상황</div>
+                        <p class="trouble-text">
+                          프로젝트를 진행할 당시 애니메이션에 대해 공부하고 있었고, 출결 앱의 여러 화면 전환과
+                          인터랙션을 직접 애니메이션으로 구현해보고 싶었습니다. 하지만 모든 요소를
+                          AnimationController와 커스텀 애니메이션으로 직접 만들다 보니, 화면에 따라
+                          렌더링 이슈가 발생하거나 애니메이션이 버벅거리는 현상이 생겼습니다.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="timeline-step">
+                      <div class="timeline-dot"></div>
+                      <div class="timeline-line"></div>
+                      <div class="timeline-content">
+                        <div class="trouble-label cause">원인 분석</div>
+                        <p class="trouble-text">
+                          복잡한 모션이나 디테일한 효과를 직접 구현하려면 다수의 위젯과 컨트롤러를 정교하게
+                          제어해야 했고, 그 과정에서 불필요한 리빌드와 연산이 늘어나면서 성능 저하로 이어졌습니다.
+                          모든 애니메이션을 직접 만드는 방식은 시간 대비 효율도 떨어지고, 완성도 면에서도 한계가
+                          있었습니다.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="timeline-step">
+                      <div class="timeline-dot"></div>
+                      <div class="timeline-line"></div>
+                      <div class="timeline-content">
+                        <div class="trouble-label solution">해결 방법</div>
+                        <p class="trouble-text">
+                          이런 고민을 하던 중 <code>Lottie</code>를 알게 됐습니다. Lottie는 디자인 툴에서 만든
+                          애니메이션을 JSON 형태로 제공해, 별도의 복잡한 코드 없이 가져와서 재생할 수 있는
+                          라이브러리였습니다. 출근/퇴근 성공, 날씨 표현 등 시각적 효과가 중요한 부분은
+                          Lottie 애니메이션으로 대체하고, 화면 전환처럼 간단한 인터랙션만 커스텀 애니메이션으로
+                          남겨 역할을 나눠 적용했습니다.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="timeline-step last">
+                      <div class="timeline-dot"></div>
+                      <div class="timeline-content">
+                        <div class="trouble-label result">결과 & 배운 점</div>
+                        <p class="trouble-text">
+                          렌더링 이슈와 버벅임 없이 풍부한 애니메이션 효과를 적용할 수 있었고, 개발 시간도
+                          크게 줄었습니다.<br><br>
+                          모든 것을 직접 구현하는 것이 항상 최선은 아니라는 것을 배웠습니다. 주어진 환경과
+                          상황에 맞게 적절한 도구를 선택해서 사용하는 것도 개발자에게 필요한 역량이라는 걸
+                          체감했고, 효과와 효율 사이에서 균형을 맞추는 경험을 할 수 있었습니다.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="trouble-item">
+                <div class="trouble-header">
+                  <span class="trouble-num">03</span>
+                  <div class="trouble-title">평범한 연차 버튼 -> 글레어(Glare) 애니메이션으로 시각적 강조</div>
+                </div>
+                <div class="trouble-body">
+                  <div class="trouble-timeline">
+                    <div class="timeline-step">
+                      <div class="timeline-dot"></div>
+                      <div class="timeline-line"></div>
+                      <div class="timeline-content">
+                        <div class="trouble-label problem">문제 상황</div>
+                        <p class="trouble-text">
+                          연차 현황 카드에는 '휴가 사용하기' 버튼이 있는데, 직장인이라면 누구나 연차 사용이
+                          반가운 기능이라는 점에서 이 버튼이 화면에서 그냥 묻히는 게 아쉬웠습니다.
+                          단순한 색상 버튼만으로는 시선을 끌기에 부족했고, 다른 정적인 UI 요소들과
+                          구분되는 특별한 느낌을 주고 싶었습니다.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="timeline-step">
+                      <div class="timeline-dot"></div>
+                      <div class="timeline-line"></div>
+                      <div class="timeline-content">
+                        <div class="trouble-label cause">원인 분석</div>
+                        <p class="trouble-text">
+                          버튼의 의미(연차 사용)와 시각적 표현이 다른 버튼들과 동일하다 보니, 사용자가
+                          굳이 눌러봐야겠다는 동기를 주지 못했습니다. 정적인 디자인 변경만으로는
+                          한계가 있었고, 자연스럽게 시선이 가는 모션 효과가 필요하다는 결론에 도달했습니다.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="timeline-step">
+                      <div class="timeline-dot"></div>
+                      <div class="timeline-line"></div>
+                      <div class="timeline-content">
+                        <div class="trouble-label solution">해결 방법</div>
+                        <p class="trouble-text">
+                          빛이 버튼 표면을 스치고 지나가는 듯한 글레어(Glare) 애니메이션을 직접 구현했습니다.
+                          <code>AnimationController</code>와 <code>CurvedAnimation</code>으로 애니메이션 진행도를 관리하고,
+                          <code>LayoutBuilder</code>로 버튼의 실제 너비를 받아와 빛이 이동할 거리를 동적으로 계산했습니다.
+                          빛 막대를 비스듬히 기울인 상태에서도 화면 밖까지 자연스럽게 빠져나가도록
+                          <code>sin</code> 함수로 추가 이동 거리를 보정했고, <code>Stack</code>으로 정적인 버튼과
+                          애니메이션 레이어를 분리해 <code>AnimatedBuilder</code>가 빛 효과 부분만 리빌드하도록 구성했습니다.
+                          애니메이션이 끝나면 <code>addStatusListener</code>와 짧은 딜레이로 다시 시작되게 만들어
+                          일정한 리듬으로 반복되도록 했습니다.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="timeline-step last">
+                      <div class="timeline-dot"></div>
+                      <div class="timeline-content">
+                        <div class="trouble-label result">결과 & 배운 점</div>
+                        <p class="trouble-text">
+                          '휴가 사용하기' 버튼에 은은한 빛 반사 효과가 더해지면서, 화면에서 자연스럽게
+                          눈에 띄는 요소가 되었습니다.<br><br>
+                          단순한 애니메이션 하나도 위젯 크기, 회전 각도, 리빌드 범위까지 고려해야
+                          자연스럽고 가벼운 효과가 된다는 것을 배웠습니다. 특히 정적인 부분과
+                          애니메이션 부분을 분리해서 설계하는 습관은 이후 다른 화면의 애니메이션을
+                          구현할 때도 성능을 고려하는 기준이 되었습니다.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="trouble-item">
+                <div class="trouble-header">
+                  <span class="trouble-num">04</span>
+                  <div class="trouble-title">작은 화면에 많은 일정 정보 -> 오버스크롤 기반 확장형 일정 뷰로 해결</div>
+                </div>
+                <div class="trouble-body">
+                  <div class="trouble-timeline">
+                    <div class="timeline-step">
+                      <div class="timeline-dot"></div>
+                      <div class="timeline-line"></div>
+                      <div class="timeline-content">
+                        <div class="trouble-label problem">문제 상황</div>
+                        <p class="trouble-text">
+                          일정 화면에는 캘린더와 함께 일주일 단위의 일정 리스트를 보여줘야 했습니다.
+                          하지만 모바일이라는 한정된 화면에서 캘린더와 일정 리스트, 그리고 사용자가
+                          더 보고 싶어할 수 있는 추가 일정까지 모두 한 화면에 담기에는 공간이 턱없이
+                          부족했습니다. 모든 정보를 한 번에 펼쳐두면 캘린더가 차지하는 영역이 커서
+                          리스트가 잘려 보이거나, 정보량 자체가 너무 많아 가독성이 떨어지는 문제가 있었습니다.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="timeline-step">
+                      <div class="timeline-dot"></div>
+                      <div class="timeline-line"></div>
+                      <div class="timeline-content">
+                        <div class="trouble-label cause">원인 분석</div>
+                        <p class="trouble-text">
+                          평소에는 일주일 정도의 일정만 보여주는 것이 가독성 면에서 가장 적절했지만,
+                          사용자가 더 많은 일정을 확인하고 싶을 때를 위한 동작이 없었습니다.
+                          화면을 전환해 별도의 전체 일정 페이지로 이동하는 방식은 흐름이 끊기고,
+                          처음부터 모든 일정을 무한 리스트로 보여주는 방식은 캘린더 영역을 압박해
+                          오히려 가독성을 해쳤습니다. 결국 평소와 '더 보기' 상태를 자연스럽게
+                          전환할 수 있는 인터랙션이 필요했습니다.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="timeline-step">
+                      <div class="timeline-dot"></div>
+                      <div class="timeline-line"></div>
+                      <div class="timeline-content">
+                        <div class="trouble-label solution">해결 방법</div>
+                        <p class="trouble-text">
+                          일정 리스트를 아래로 오버스크롤하면, <code>NotificationListener</code>로
+                          오버스크롤 정도를 감지해 화면 상단에 안내 화살표를 <code>Lottie</code> 애니메이션으로
+                          보여주도록 했습니다. 일정 임계값을 넘으면 트리거가 활성화되고,
+                          <code>AnimatedPositioned</code>로 캘린더 영역이 위로 축소되면서 일정 리스트 영역이
+                          화면 대부분을 차지하도록 자연스럽게 확장됐습니다. 확장된 상태에서는
+                          기존 일주일치 데이터 대신 무한 스크롤 리스트로 전환되어, 사용자가 스크롤할
+                          때마다 위/아래 방향에 따라 추가 일정을 가져오는 API를 호출하도록 구현했습니다.
+                          닫기 버튼을 누르면 다시 원래의 캘린더 + 일주일 일정 뷰로 복귀했습니다.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="timeline-step last">
+                      <div class="timeline-dot"></div>
+                      <div class="timeline-content">
+                        <div class="trouble-label result">결과 & 배운 점</div>
+                        <p class="trouble-text">
+                          사용자는 평소엔 캘린더와 간결한 일주일 일정을 보고, 더 많은 정보가 필요할 때만
+                          오버스크롤이라는 자연스러운 동작으로 화면을 확장해 무한히 일정을 탐색할 수
+                          있게 됐습니다. 화면 전환 없이도 정보 밀도를 상황에 맞게 조절할 수 있었습니다.<br><br>
+                          작은 화면일수록 모든 정보를 한 번에 보여주려 하기보다, 사용자의 행동에
+                          따라 화면 구성 자체가 유연하게 바뀌는 인터랙션이 더 효과적이라는 걸 배웠습니다.
+                          <code>NotificationListener</code>로 스크롤 상태를 세밀하게 추적하고,
+                          <code>AnimatedPositioned</code>로 레이아웃 전환을 부드럽게 처리하는 방법,
+                          그리고 오버스크롤 같은 제스처에 무한 스크롤과 API 호출을 자연스럽게 결합하는
+                          패턴을 직접 설계해본 경험이었습니다.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="trouble-item">
+                <div class="trouble-header">
+                  <span class="trouble-num">05</span>
+                  <div class="trouble-title">실제 사내 배포 후 발생한 UI 깨짐 -> 다양한 기기 대응으로 해결</div>
+                </div>
+                <div class="trouble-body">
+                  <div class="trouble-timeline">
+                    <div class="timeline-step">
+                      <div class="timeline-dot"></div>
+                      <div class="timeline-line"></div>
+                      <div class="timeline-content">
+                        <div class="trouble-label problem">문제 상황</div>
+                        <p class="trouble-text">
+                          개발 중에는 제 테스트 기기에서 UI가 의도한 대로 잘 보였는데, TestFlight와 APK로
+                          실제 동료들에게 배포하자 화면 곳곳에서 문제가 보고되기 시작했습니다.
+                          일부 기기에서는 텍스트가 잘려 보이거나, 버튼과 카드 레이아웃이 깨지거나,
+                          글자 크기가 화면에 비해 너무 크거나 작게 보이는 경우가 있었습니다.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="timeline-step">
+                      <div class="timeline-dot"></div>
+                      <div class="timeline-line"></div>
+                      <div class="timeline-content">
+                        <div class="trouble-label cause">원인 분석</div>
+                        <p class="trouble-text">
+                          제가 가진 테스트 기기는 한정적이었지만, 동료들이 사용하는 아이폰과 안드로이드
+                          기종은 화면 비율과 해상도, 시스템 글꼴 크기 설정까지 매우 다양했습니다.
+                          개발 단계에서 고정된 크기 값으로 작성된 위젯들은 특정 화면 비율에서는
+                          의도한 대로 보였지만, 화면이 더 좁거나 길쭉한 기기에서는 레이아웃이
+                          그대로 무너지는 구조였습니다.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="timeline-step">
+                      <div class="timeline-dot"></div>
+                      <div class="timeline-line"></div>
+                      <div class="timeline-content">
+                        <div class="trouble-label solution">해결 방법</div>
+                        <p class="trouble-text">
+                          <code>flutter_screenutil</code>을 도입해 360x800 해상도를 기준으로 모든 크기 값을
+                          상대적인 비율로 변환하도록 전체 화면을 점검했습니다. 동료들에게 캡처 화면과
+                          기기 정보를 받아 실제로 깨진 화면을 하나씩 재현하면서, 고정 크기로 작성된
+                          부분을 비율 기반 크기로 교체하고, 텍스트가 길어질 수 있는 영역은
+                          `Expanded`, `Flexible`, `TextOverflow` 처리를 추가했습니다.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="timeline-step last">
+                      <div class="timeline-dot"></div>
+                      <div class="timeline-content">
+                        <div class="trouble-label result">결과 & 배운 점</div>
+                        <p class="trouble-text">
+                          다양한 기기에서 보고되던 레이아웃 깨짐과 가독성 문제를 대부분 해결할 수 있었고,
+                          이후 새로운 화면을 만들 때도 처음부터 반응형 크기를 고려해서 작업하는 습관이 생겼습니다.<br><br>
+                          제 기기에서 잘 보인다고 모든 사용자에게 잘 보이는 것은 아니라는 걸 직접 겪으면서
+                          배웠습니다. 실제 사용자에게 배포하고 피드백을 받는 과정 자체가 개발 단계에서는
+                          발견할 수 없는 문제들을 드러내준다는 것, 그리고 화면 크기와 텍스트 길이에 대한
+                          방어적인 설계가 왜 중요한지를 체감한 경험이었습니다.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="modal-trouble-link-wrap">
+            <button class="modal-trouble-link-btn"
+              onclick="switchTab(this.closest('.modal-content').querySelector('.modal-tab[onclick*=tab-result]'), 'tab-result'); this.closest('.modal-box').scrollTo({top: 0, behavior: 'smooth'})">
+              <span class="material-icons">school</span>
+              어떤 것들을 배웠을까?
+              <span class="material-icons">arrow_forward</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Tab: 배운 점 -->
+        <div class="modal-tab-content" id="tab-result">
+          <div class="modal-section-title">
+            <span class="material-icons">school</span>
+            배운 점
+          </div>
+          <div class="modal-learn-section">
+            <ul class="modal-learn-list">
+              <li class="modal-learn-item">
+                <span class="material-icons">chevron_right</span>
+                <div>
+                  <div class="learn-item-title">클린 아키텍처(Data / Domain / Presentation 3계층)를 출결·일정·날씨 등 여러 도메인에 일관되게 적용해봄
+                  </div>
+                  <div class="learn-item-desc">서버 응답 DTO(@JsonSerializable)와 도메인 모델을 Mapper로 분리하고, Repository를
+                    interface(domain)와 impl(data)로 나누며,
+                    EntryUseCase·GetWeatherInfoUseCase처럼 기능 하나당 UseCase 한 개로 잘게 쪼개 ViewModel이 비즈니스 로직에 직접 의존하지 않도록 설계함
+                  </div>
+                </div>
+              </li>
+              <li class="modal-learn-item">
+                <span class="material-icons">chevron_right</span>
+                <div>
+                  <div class="learn-item-title">Provider + ChangeNotifier 기반 MVVM 패턴으로 화면별 ViewModel을 분리해봄</div>
+                  <div class="learn-item-desc">로딩(isFetchLoading)·에러(ErrorState)·출결 상태(BEFORE/AFTER_CHECK_IN/OUT 같은
+                    enum)를 ViewModel에서 관리하고
+                    notifyListeners()로 UI에 반영하는 단방향 데이터 흐름을 익히고, ChangeNotifierProvider로 ViewModel을 주입하는 구조도 함께 설계</div>
+                </div>
+              </li>
+              <li class="modal-learn-item">
+                <span class="material-icons">chevron_right</span>
+                <div>
+                  <div class="learn-item-title">get_it + injectable 어노테이션 기반 DI와 build_runner 코드 생성 워크플로우를 익힘</div>
+                  <div class="learn-item-desc">@injectable / @LazySingleton(as: ...)으로 구현체를 인터페이스에 바인딩하고, @module 로
+                    Dio·ApiService 같은
+                    서드파티 객체를 등록. di_setup.config.dart 자동 생성 파일을 통해 주입받는 패턴을 사용</div>
+                </div>
+              </li>
+              <li class="modal-learn-item">
+                <span class="material-icons">chevron_right</span>
+                <div>
+                  <div class="learn-item-title">Retrofit + Dio 조합으로 어노테이션 기반 타입 세이프 REST API 클라이언트를 구성해봄</div>
+                  <div class="learn-item-desc">@RestApi 추상 클래스에 @POST·@GET·@Path·@Query·@Body 데코레이터로
+                    출근/퇴근/장소변경/근무이력/연차/월별 일정 등의
+                    엔드포인트를 선언하고, api_service.g.dart 가 구현체를 자동 생성하도록 구성</div>
+                </div>
+              </li>
+              <li class="modal-learn-item">
+                <span class="material-icons">chevron_right</span>
+                <div>
+                  <div class="learn-item-title">제네릭 응답 래퍼(BaseResponseDto&lt;T&gt;)를 json_serializable로 처리하는 법을 익힘</div>
+                  <div class="learn-item-desc">genericArgumentFactories를 활용해
+                    status·code·message·resultObject&lt;T&gt;·resultList&lt;T&gt; 형태의
+                    공통 서버 응답 포맷을 타입 파라미터 하나로 재사용 가능한 제네릭 역직렬화로 처리하는 패턴을 체득</div>
+                </div>
+              </li>
+              <li class="modal-learn-item">
+                <span class="material-icons">chevron_right</span>
+                <div>
+                  <div class="learn-item-title">Dio Interceptor로 JWT Access/Refresh 토큰 자동 갱신 및 재시도 흐름을 구현해봄</div>
+                  <div class="learn-item-desc">onRequest에서 SecureStorage의 AccessToken을 읽어 Authorization 헤더에 자동 첨부하고,
+                    onError에서 401 응답을 감지하면 RefreshToken으로 토큰을 재발급받아 RequestOptions를 dio.fetch로 재요청, 실패 시 토큰을 clear하는
+                    흐름을 설계함 (동시 요청 중복 갱신 방지는 향후 개선 포인트로 남김)</div>
+                </div>
+              </li>
+              <li class="modal-learn-item">
+                <span class="material-icons">chevron_right</span>
+                <div>
+                  <div class="learn-item-title">flutter_secure_storage로 민감 정보를 안전하게 저장</div>
+                  <div class="learn-item-desc">iOS Keychain / Android Keystore 위에 AccessToken·RefreshToken·UserInfo(JSON
+                    직렬화)를 저장하고,
+                    저장 키 이름조차 flutter_dotenv(.env)로 분리. saveTokens/clearTokens는 Future.wait로 병렬 처리</div>
+                </div>
+              </li>
+              <li class="modal-learn-item">
+                <span class="material-icons">chevron_right</span>
+                <div>
+                  <div class="learn-item-title">go_router로 선언적 라우팅 구조를 설계해봄</div>
+                  <div class="learn-item-desc">StatefulShellRoute.indexedStack으로 바텀 네비게이션 각 탭의 독립 스택을 분리하고, 탭 하위에 중첩
+                    GoRoute(내정보→정보수정/연차사용)를 구성. CustomTransitionPage로 화면 전환 애니메이션을 커스터마이징하고, state.extra로
+                    점심 메뉴 이미지(Uint8List) 같은 객체를 라우트 간 전달</div>
+                </div>
+              </li>
+              <li class="modal-learn-item">
+                <span class="material-icons">chevron_right</span>
+                <div>
+                  <div class="learn-item-title">바텀 네비게이션 "탭 재선택"을 TabReselectNotifier로 감지하는 패턴을 직접 만들어봄</div>
+                  <div class="learn-item-desc">TabReselectNotifier로 직전 인덱스와 새 인덱스를 비교해 다른 탭을 거쳐 되돌아온 경우를 구분하고, 사용 후
+                    clear()로 중복 트리거를 방지.
+                    MultiProvider로 앱 최상단에 주입해 어느 화면에서든 구독할 수 있게 설계</div>
+                </div>
+              </li>
+              <li class="modal-learn-item">
+                <span class="material-icons">chevron_right</span>
+                <div>
+                  <div class="learn-item-title">자체 백엔드 외에 여러 외부 공개 API를 혼합 연동해봄</div>
+                  <div class="learn-item-desc">자체 서버는 Retrofit으로, 에어코리아 PM10 API와 weatherapi.com 날씨 예보 API는 http 패키지로 직접
+                    호출.
+                    서울 금천구 측정소 필터링·PM10 수치 구간별 상태 판정 및 응답 처리까지 다뤄봄</div>
+                </div>
+              </li>
+              <li class="modal-learn-item">
+                <span class="material-icons">chevron_right</span>
+                <div>
+                  <div class="learn-item-title">날씨 데이터를 매퍼 단계로 가공해 Lottie 애니메이션까지 연결하는 구조를 설계해봄</div>
+                  <div class="learn-item-desc">WeatherConditionHelper(코드→컨디션 enum) → DayPeriodHelper(일출·일몰 시각 기준
+                    아침/해질녘/밤/비 판정) →
+                    WeatherLottieHelper(상황별 Lottie 경로 선택)로 책임을 단계별로 분리. weatherapi의 "07:47 AM" 같은 시간 문자열 파싱과
+                    시간대 판정 로직을 직접 구현</div>
+                </div>
+              </li>
+              <li class="modal-learn-item">
+                <span class="material-icons">chevron_right</span>
+                <div>
+                  <div class="learn-item-title">Dio 스트리밍 응답으로 이미지 바이너리를 직접 받아 처리하는 법을 익힘</div>
+                  <div class="learn-item-desc">점심 메뉴 사진을 ResponseType.bytes 스트림으로 받아 청크를 fold로 모아 Uint8List로 변환하고,
+                    이를 화면에서 메모리 이미지로 렌더링. JSON이 아닌 바이트 스트림 응답을 다루는 경험을 쌓음</div>
+                </div>
+              </li>
+              <li class="modal-learn-item">
+                <span class="material-icons">chevron_right</span>
+                <div>
+                  <div class="learn-item-title">자체 디자인 시스템을 토큰화해서 운영해봄</div>
+                  <div class="learn-item-desc">primary/secondary/gray 컬러를 0~100 스케일 상수(AppColors)로 토큰화하고, AppTheme로
+                    Light/Dark ThemeData와
+                    NotoSans 폰트·텍스트 테마를 통합. flutter_screenutil(360×800 기준)의 .sp/.w로 다양한 해상도에 대응하고,
+                    MediaQuery textScaler를 1.0으로 고정해 시스템 글꼴 배율의 레이아웃 깨짐을 방지</div>
+                </div>
+              </li>
+              <li class="modal-learn-item">
+                <span class="material-icons">chevron_right</span>
+                <div>
+                  <div class="learn-item-title">table_calendar 기반 캘린더 UI 구축과 로케일 설정 작업을 경험함</div>
+                  <div class="learn-item-desc">일정·연차 사용 화면에 table_calendar를 적용해 월별 일정을 표시하고, 서버의 일자별 일정 Map을 주말/요일 계산과
+                    함께 도메인 모델로 변환. flutter_localizations로 ko 로케일 적용, flutter_dotenv로 API 키·base URL을 환경 변수로 분리하는
+                    빌드 설정도 처리</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="modal-trouble-link-wrap">
+            <a href="https://github.com/youhwanJung/dorosee_app" target="_blank" class="modal-trouble-link-btn">
+              <i class="devicon-github-original"></i>
+              GitHub에서 코드 보기
+              <span class="material-icons">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>

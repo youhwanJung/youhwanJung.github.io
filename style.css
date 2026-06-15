@@ -1086,7 +1086,16 @@ nav a:hover {
   color: white;
 }
 
+.modal-store-btn.android {
+  background: #34A853;
+  color: white;
+}
+
 .modal-store-btn.ios:hover {
+  opacity: 0.8;
+}
+
+.modal-store-btn.android:hover {
   opacity: 0.8;
 }
 
