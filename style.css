@@ -1091,6 +1091,23 @@ nav a:hover {
   color: white;
 }
 
+.modal-award {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #FFD66B, #FFB800);
+  color: #3A2A00;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.modal-award::before {
+  content: "🏆";
+  font-size: 14px;
+}
+
 .modal-store-btn.ios:hover {
   opacity: 0.8;
 }
