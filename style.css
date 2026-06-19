@@ -455,7 +455,7 @@ nav a:hover {
 
 .experience-content {
   display: grid;
-  grid-template-columns: 3.5fr 8.5fr;
+  grid-template-columns: 2.5fr 9.5fr;
   /* 3.5:8.5 비율로 회사명과 프로젝트 구획 최적 분할 */
   gap: 56px;
 }
@@ -505,8 +505,33 @@ nav a:hover {
 }
 
 .exp-project-block {
-  padding: 40px 0;
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  padding: 20px 0;
   border-top: 1px solid #e5e7eb;
+}
+
+.p-image-col {
+  flex: 0 0 130px;
+  background: #fff;
+  border-radius: 8px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.p-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  object-position: top;
+  border-radius: 8px;
+}
+
+.p-content-col {
+  flex: 1;
+  min-width: 0;
 }
 
 .exp-project-block:first-child {
@@ -2079,3 +2104,4 @@ nav a:hover {
 
   /* ────────────────────────────────────────── */
 }
+
