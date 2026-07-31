@@ -1,0 +1,15 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["V4GAHW86XS.com.joojung.cashlog"],
+        "components": [
+          {
+            "/": "/settlement/*",
+            "comment": "정산 상세"
+          }
+        ]
+      }
+    ]
+  }
+}
