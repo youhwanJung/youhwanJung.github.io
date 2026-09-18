@@ -1,0 +1,224 @@
+/* ============================================================
+   ABOUT ME
+============================================================ */
+#AboutMe {
+  background-color: #ffffff;
+  padding: 60px 20px;
+  font-family: 'Pretendard', sans-serif;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.AboutMe-inner {
+  max-width: 1090px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.AboutMe-header {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  padding: 0 0 20px 0;
+  margin-bottom: 48px;
+  width: 100%;
+  border-bottom: 2px solid #1a2a3a;
+  font-family: 'Pretendard', sans-serif;
+}
+
+.AboutMe-header .header-index {
+  font-size: 16px;
+  font-weight: 800;
+  color: #64748b;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  margin-bottom: 3px;
+}
+
+.AboutMe-header .header-title {
+  font-size: 32px;
+  font-weight: 900;
+  color: #1a2a3a;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  margin: 0;
+}
+
+.AboutMe-Content {
+  display: grid;
+  grid-template-columns: 4.5fr 7.5fr;
+  gap: 80px;
+}
+
+.about-main-title {
+  font-size: 44px;
+  font-weight: 900;
+  color: #1a2a3a;
+  margin: 0 0 6px 0;
+  letter-spacing: -1px;
+}
+
+.about-subtitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #94a3b8;
+  margin: 0 0 32px 0;
+  letter-spacing: -0.3px;
+}
+
+.about-paragraph {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-left: 2px solid #1a2a3a;
+  padding-left: 20px;
+}
+
+.about-paragraph p {
+  font-size: 15px;
+  line-height: 1.75;
+  color: #334155;
+  margin: 0;
+  word-break: keep-all;
+}
+
+.about-right-zone {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-list-block {
+  display: grid;
+  grid-template-columns: 3fr 9fr;
+  padding: 28px 0;
+  border-top: 1px solid #e5e7eb;
+}
+
+.about-list-block:last-child {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.block-label {
+  font-size: 13px;
+  font-weight: 800;
+  color: #1a2a3a;
+  /* 한글 라벨이라 영문 대문자용 자간(0.05em)은 쓰지 않는다 */
+  letter-spacing: normal;
+  padding-top: 2px;
+  /* 라벨이 내용 열에 붙지 않도록 최소 여백을 확보한다 */
+  padding-right: 16px;
+  line-height: 1.5;
+}
+
+/* 라벨 아래 붙는 보조 정보 (예: 총 경력) */
+.label-note {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #94a3b8;
+  letter-spacing: normal;
+}
+
+.block-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.flat-row {
+  display: flex;
+  font-size: 15px;
+  align-items: center;
+  /* 키 칸(120px)과 값 사이에 항상 확보되는 최소 간격.
+     가장 긴 키인 '정보처리산업기사'(104px)도 넉넉하게 떨어진다. */
+  column-gap: 48px;
+}
+
+.flat-key {
+  width: 120px;
+  flex-shrink: 0;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.flat-val {
+  color: #1e293b;
+  font-weight: 500;
+}
+
+.flat-val a {
+  color: #1e293b;
+  text-decoration: none;
+}
+
+.flat-val a:hover {
+  text-decoration: underline;
+}
+
+/* 자격/수상처럼 '항목명'이 주 정보이고 날짜가 보조인 블록에서는 색을 뒤집는다 */
+.emphasize-key .flat-key {
+  color: #1e293b;
+}
+
+.emphasize-key .flat-val {
+  color: #64748b;
+}
+
+/* 한 줄 구성: [회사명 · 역할] ...여백... [기간 · 재직기간 배지] */
+.flat-history {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.history-main {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  min-width: 0;
+  gap: 10px;
+}
+
+/* 역할 텍스트(.history-role)와 크기를 맞추고 색으로만 구분한다 */
+.comp-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.comp-duration {
+  font-size: 11px;
+  font-weight: 700;
+  background: #f1f5f9;
+  color: #475569;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.history-detail {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.history-role {
+  color: #64748b;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.history-date {
+  color: #94a3b8;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.highlight-point {
+  color: #1a2a3a;
+  font-weight: 700;
+}
+

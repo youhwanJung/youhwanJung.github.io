@@ -1,0 +1,516 @@
+/* ============================================================
+   RESPONSIVE — Tablet (<= 968px)
+============================================================ */
+@media (max-width: 968px) {
+  #hero {
+    padding: 0 24px;
+    height: 520px !important;
+    min-height: 520px !important;
+  }
+
+  .hero-main-title {
+    font-size: 40px;
+  }
+
+  .hero-leading-text {
+    font-size: 18px;
+  }
+
+  .AboutMe-header {
+    font-size: 32px;
+    margin-bottom: 36px;
+  }
+
+  .AboutMe-Content {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .about-main-title {
+    font-size: 36px;
+  }
+
+  .about-subtitle {
+    margin-bottom: 20px;
+  }
+
+  .skills-header {
+    font-size: 32px;
+  }
+
+  .skills-list-wrap {
+    gap: 36px;
+  }
+
+  .skill-group-icon {
+    font-size: 18px;
+  }
+
+  .skill-group-title {
+    font-size: 18px;
+  }
+
+  .skill-chip-list {
+    gap: 8px;
+  }
+
+  .skill-chip {
+    padding: 8px 12px;
+    font-size: 12.5px;
+  }
+
+  .experience-header {
+    font-size: 32px;
+  }
+
+  .experience-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .exp-left-zone {
+    position: relative;
+    top: 0;
+    border-bottom: 2px solid #f1f5f9;
+    /* 회사 정보와 프로젝트 리스트 사이 구분선 */
+    padding-bottom: 20px;
+  }
+
+  .company-name {
+    font-size: 26px;
+  }
+
+  .exp-project-block {
+    padding: 32px 0;
+  }
+
+  .exp-project-block:first-child {
+    padding-top: 0;
+  }
+
+  .personal-header {
+    font-size: 32px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .modal-overlay {
+    padding: 0 !important;
+    align-items: flex-end;
+    /* 모바일에서는 바텀시트 느낌이나 꽉 찬 화면으로 유도 */
+  }
+
+  /* 2. 모달 하얀색 박스 */
+  .modal-box {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  /* 3. 우측 상단 닫기 버튼: 패딩을 살짝 줄여 여백 확보 */
+  .modal-close {
+    top: 12px !important;
+    right: 12px !important;
+    padding: 8px !important;
+    /* 터치 영역은 유지하되 간격 좁힘 */
+    z-index: 1001;
+  }
+
+  /* 4. 모달 스크롤 컨텐츠 영역: 패딩 대폭 최적화 */
+  /* 4. 모달 스크롤 컨텐츠 영역: 패딩을 아주 타이트하게 조정 */
+  .modal-content {
+    padding: 12px 8px 12px 8px !important;
+  }
+
+  /* 5. 헤더 영역 정돈 */
+  .modal-project-header {
+    margin-bottom: 20px !important;
+    /* 마진 소폭 축소 */
+  }
+
+  .modal-project-title-row {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+  }
+
+  .modal-project-name {
+    font-size: 24px !important;
+    /* 폰트가 너무 크면 여백을 더 먹으므로 살짝 조절 */
+    padding-right: 24px;
+    /* 우측 닫기 버튼과 겹침 방지 */
+  }
+
+  /* 6. GitHub / 스토어 링크 버튼: 손가락으로 누르기 편하게 확장 */
+  .modal-title-btns {
+    width: 100% !important;
+    display: grid !important;
+    grid-template-columns: 1fr;
+    /* 세로로 길게 배치하거나 1fr 1fr 쪼개기 가능 */
+    gap: 8px !important;
+  }
+
+  .modal-title-btns a,
+  .modal-title-btns span {
+    width: 100% !important;
+    box-sizing: border-box;
+    justify-content: center !important;
+    padding: 10px 14px !important;
+    font-size: 13px !important;
+  }
+
+  /* 메타 정보 뱃지 줄바꿈 흐름 처리 */
+  .modal-project-meta-row {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+  }
+
+  /* 7. 탭 메뉴: 바뀐 좌우 패딩(16px)에 맞춰 마진 상쇄값 조정 */
+  .modal-tabs {
+    display: flex !important;
+    overflow-x: auto !important;
+    white-space: nowrap !important;
+    -webkit-overflow-scrolling: touch;
+    border-bottom: 2px solid #e5e7eb !important;
+    /* .modal-content의 좌우 패딩이 16px이므로 똑같이 -16px로 맞춰서 딱 붙게 수정 */
+    margin: 0 -16px 20px -16px !important;
+    padding: 0 16px !important;
+  }
+
+  .modal-tab {
+    padding: 10px 14px !important;
+    /* 탭 내부 패딩도 콤팩트하게 */
+    font-size: 14px !important;
+    flex: 1 !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+
+  /* 8. 테크 스택 그리드 */
+  .modal-tech-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  /* 9. 트러블 슈팅 타임라인 가동 범위 확대 */
+  .trouble-timeline {
+    padding-left: 4px !important;
+  }
+
+  .timeline-step {
+    padding-bottom: 24px !important;
+  }
+
+  .timeline-content {
+    padding-left: 16px !important;
+  }
+
+  .trouble-title {
+    font-size: 15px !important;
+    line-height: 1.4 !important;
+  }
+
+  .trouble-text {
+    font-size: 13px !important;
+    line-height: 1.6 !important;
+  }
+
+  /* .hero-cta {
+    display: none;.
+  } */
+}
+
+/* ============================================================
+   RESPONSIVE — Mobile (<= 768px)
+============================================================ */
+@media (max-width: 768px) {
+
+  #hero {
+    padding: 0 24px;
+    height: 520px !important;
+    min-height: 520px !important;
+  }
+
+  header {
+    background-color: #ffffff !important;
+    padding: 14px 20px;
+  }
+
+  header h1 a {
+    color: #1a2a3a;
+  }
+
+  nav {
+    display: none;
+  }
+
+  nav a {
+    color: #1a2a3a;
+    font-size: 15px;
+    padding: 4px 0;
+  }
+
+  nav.open {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 57px;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 32px 24px;
+    gap: 24px;
+    border-bottom: 1px solid #e5e7eb;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    animation: slideDown 0.3s ease;
+    z-index: 99;
+  }
+
+  .hamburger {
+    display: flex;
+    color: #1a2a3a;
+  }
+
+  .hero-main-title {
+    font-size: 32px;
+  }
+
+  .hero-meta {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .about-list-block {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 24px 0;
+  }
+
+  .flat-row {
+    column-gap: 24px;
+  }
+
+  .flat-key {
+    width: 90px;
+  }
+
+  /* 폭이 좁으면 한 줄을 두 줄로 되돌린다 — [회사명 · 역할] / [기간 · 배지] */
+  .flat-history {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .history-detail {
+    align-items: center;
+    gap: 8px;
+  }
+
+  .p-header-line {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .p-title {
+    font-size: 18px;
+  }
+
+  .p-date {
+    font-size: 12px;
+    padding-top: 0;
+  }
+
+  .p-tech-badges {
+    gap: 4px;
+    margin-top: 8px;
+  }
+
+  .tech-tag {
+    font-size: 10.5px;
+    padding: 2px 6px;
+  }
+
+  /* 좁은 폭에서는 플랫폼 라벨을 태그 위로 올린다 */
+  .p-tech-row {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .p-tech-platform {
+    flex: none;
+    padding-top: 0;
+    font-size: 11px;
+  }
+
+  .p-tech-row-tags {
+    gap: 4px;
+  }
+
+  .p-bullet-list li {
+    font-size: 13px;
+  }
+  
+
+  .modal-overlay {
+    padding: 0 !important;
+    align-items: flex-end;
+    /* 모바일에서는 바텀시트 느낌이나 꽉 찬 화면으로 유도 */
+  }
+
+  /* 2. 모달 하얀색 박스: 모바일에서는 여백 없이 100% 꽉 채우기 */
+  .modal-box {
+    padding: 16px !important;
+    overflow-x: hidden !important;
+  }
+
+  /* 3. 우측 상단 닫기 버튼: 터치하기 편하게 크기와 위치 보정 */
+  .modal-close {
+    top: 16px !important;
+    right: 16px !important;
+    padding: 10px !important;
+    z-index: 1001;
+  }
+
+  /* 4. 모달 스크롤 컨텐츠 영역: 헤더와 탭이 밀리지 않도록 고정하고 내부만 스크롤 */
+  .modal-content {
+    flex: 1;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden !important;
+    /* iOS 사파리 부드러운 스크롤 보장 */
+    padding: 24px 0 40px 0 !important;
+    scrollbar-width: none;
+
+  }
+
+  .modal-content::-webkit-scrollbar {
+    display: none;
+
+  }
+
+  /* 5. 헤더 영역 정돈: 전체 헤더 내에서 순서 정렬하기 */
+  .modal-project-header {
+    display: flex !important;
+    flex-direction: column !important;
+    /* 위에서 아래로 흐르게 설정 */
+    margin-bottom: 24px !important;
+  }
+
+  .modal-project-title-row {
+    display: contents !important;
+  }
+
+
+  /* 1등: 프로젝트 이름 (가장 위) */
+  .modal-project-name {
+    font-size: 26px !important;
+    order: 1 !important;
+    padding-right: 32px;
+    /* 닫기 버튼과 겹침 방지 */
+    margin: 0 0 8px 0 !important;
+  }
+
+  /* 2등: 서브타이틀 설명 */
+  .modal-project-subtitle {
+    order: 2 !important;
+    margin: 0 0 12px 0 !important;
+  }
+
+  /* 3등: 날짜, 인원 등 메타 정보 뱃지 */
+  .modal-project-meta-row {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+    order: 3 !important;
+    margin-bottom: 20px !important;
+    /* 버튼과의 간격 확보 */
+  }
+
+  /* 6. GitHub / 스토어 링크 버튼 (4등: 맨 아래로 완벽 안착) */
+  .modal-title-btns {
+    width: 100% !important;
+    display: grid !important;
+    grid-template-columns: 1fr;
+    /* 모바일에서는 깔끔하게 세로로 1줄씩 */
+    gap: 8px !important;
+
+    /* 부모 박스를 탈출했기 때문에 이제 order: 4가 완벽하게 먹힙니다! */
+    order: 4 !important;
+  }
+
+
+  .modal-title-btns a,
+  .modal-title-btns span {
+    width: 100% !important;
+    box-sizing: border-box;
+    justify-content: center !important;
+    padding: 10px 14px !important;
+    font-size: 13px !important;
+  }
+
+
+  /* 7. 탭 메뉴: 모바일 화면 밖으로 탈출하지 않도록 가로 스크롤(터치 슬라이드) 보장 */
+  .modal-tabs {
+    margin: 0 -16px 24px -16px !important;
+    padding: 0 16px !important;
+  }
+
+  .modal-tab {
+    padding: 12px 16px !important;
+    font-size: 14px !important;
+    flex: 1 !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+
+  /* 8. 테크 스택 그리드 분축: 2열 구조로 콤팩트하게 변경 */
+  .modal-tech-grid {
+    grid-template-columns: 1fr !important;
+    /* 한 줄에 다 채우거나 카테고리별 정렬 */
+    gap: 16px !important;
+  }
+
+  /* 9. 트러블 슈팅 타임라인 가동 범위 확대 */
+  .trouble-timeline {
+    padding-left: 4px !important;
+  }
+
+  .timeline-step {
+    padding-bottom: 24px !important;
+  }
+
+  .timeline-content {
+    padding-left: 16px !important;
+  }
+
+  .trouble-title {
+    font-size: 15px !important;
+    line-height: 1.4 !important;
+  }
+
+  .trouble-text {
+    font-size: 13px !important;
+    line-height: 1.6 !important;
+  }
+
+
+  /* .hero-cta {
+    display: none;
+  } */
+
+  /* ────────────────────────────────────────── */
+}
+

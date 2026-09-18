@@ -1,0 +1,143 @@
+/* ============================================================
+   HERO
+============================================================ */
+#hero {
+  background-color: #ffffff;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  padding: 0 40px;
+  font-family: 'Pretendard', sans-serif;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 840px;
+}
+
+.hero-tag {
+  font-size: 13px;
+  font-weight: 800;
+  color: #1a2a3a;
+  letter-spacing: 0.25em;
+  margin-bottom: 24px;
+}
+
+.hero-main-title {
+  font-size: 56px;
+  font-weight: 900;
+  color: #1a2a3a;
+  line-height: 1.4;
+  margin: 0 0 36px 0;
+  letter-spacing: -1.5px;
+  word-break: keep-all;
+}
+
+.hero-leading-text {
+  display: block;
+  font-size: 24px;
+  font-weight: 600;
+  color: #64748b;
+  letter-spacing: -0.5px;
+  margin-bottom: 16px;
+}
+
+.hero-focus-text {
+  display: block;
+}
+
+.hero-meta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.meta-item {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1a2a3a;
+  background: #f1f5f9;
+  padding: 8px 18px;
+  /* 투명 테두리 — .meta-link 와 높이를 정확히 맞추기 위함 */
+  border: 1.5px solid transparent;
+  border-radius: 30px;
+  letter-spacing: -0.2px;
+}
+
+/* 클릭 가능한 알약 — 테두리로 읽기용 라벨(.meta-item)과 구분한다 */
+.meta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1a2a3a;
+  background: #ffffff;
+  padding: 8px 18px;
+  border: 1.5px solid #1a2a3a;
+  border-radius: 30px;
+  letter-spacing: -0.2px;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.meta-link:hover {
+  background: #1a2a3a;
+  color: #ffffff;
+}
+
+.meta-link .material-icons {
+  font-size: 16px;
+}
+
+.hero-cta {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  right: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-btn {
+  background: none;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: #94a3b8;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.hero-btn .material-icons {
+  font-size: 22px;
+}
+
+.hero-btn:hover {
+  color: #1a2a3a;
+  transform: translateY(4px);
+}
+
