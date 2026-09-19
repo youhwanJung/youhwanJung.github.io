@@ -128,7 +128,7 @@
 
 .flat-row {
   display: flex;
-  font-size: 15px;
+  font-size: 14px;
   align-items: center;
   /* 키 칸(120px)과 값 사이에 항상 확보되는 최소 간격.
      가장 긴 키인 '정보처리산업기사'(104px)도 넉넉하게 떨어진다. */
@@ -163,6 +163,12 @@
 
 .emphasize-key .flat-val {
   color: #64748b;
+}
+
+/* 기본 정보 — 라벨과 값을 모두 진하게 두어 이메일 링크와 색을 맞춘다 */
+.dark-pairs .flat-key,
+.dark-pairs .flat-val {
+  color: #1e293b;
 }
 
 /* 한 줄 구성: [회사명 · 역할] ...여백... [기간 · 재직기간 배지] */
